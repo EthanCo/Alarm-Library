@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AlarmSample.iml" filepath="$PROJECT_DIR$/AlarmSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlarmLibrary.iml" filepath="$PROJECT_DIR$/AlarmLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib.alarm/lib.alarm.iml" filepath="$PROJECT_DIR$/lib.alarm/lib.alarm.iml" />
     </modules>
