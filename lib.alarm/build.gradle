@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android' //Realm
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    testCompile rootProject.ext.dependencies.junit
+    testCompile (rootProject.ext.dependencies.mockito_all)
+    androidTestCompile 'org.powermock:powermock-api-support:1.6.3'
+    testCompile rootProject.ext.dependencies.robolectric
+    testCompile rootProject.ext.dependencies.opengl_api
+    testCompile (rootProject.ext.dependencies.hamcrest_all)
+    testCompile rootProject.ext.dependencies.httpclient
+    testCompile rootProject.ext.dependencies.mockwebserver
+    androidTestCompile(rootProject.ext.dependencies.espresso_core, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //androidTestCompile('junit:junit:4.8.+')
+    //androidTestCompile rootProject.ext.dependencies.findbugs
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.google.code.gson:gson:2.8.1'
+
+    compile rootProject.ext.dependencies.LogBase
+    //compile rootProject.ext.dependencies.LogProxy
+}
