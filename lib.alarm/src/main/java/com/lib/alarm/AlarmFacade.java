@@ -135,49 +135,49 @@ public class AlarmFacade {
 
         public Builder setYear(int year) {
             Calendar calendar = getCalendar();
-            getCalendar().set(Calendar.YEAR, year);
+            calendar.set(Calendar.YEAR, year);
             alarm.setTime(calendar.getTime());
             return this;
         }
 
         public Builder setMonth(int month) {
             Calendar calendar = getCalendar();
-            getCalendar().set(Calendar.MONTH, month);
+            calendar.set(Calendar.MONTH, month);
             alarm.setTime(calendar.getTime());
             return this;
         }
 
         public Builder setDayOfMonth(int dayOfMonth) {
             Calendar calendar = getCalendar();
-            getCalendar().set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             alarm.setTime(calendar.getTime());
             return this;
         }
 
         public Builder setHour(int hour) {
             Calendar calendar = getCalendar();
-            getCalendar().set(Calendar.HOUR, hour);
+            calendar.set(Calendar.HOUR, hour);
             alarm.setTime(calendar.getTime());
             return this;
         }
 
         public Builder setHourOfDay(int hourOfDay) {
             Calendar calendar = getCalendar();
-            getCalendar().set(Calendar.HOUR_OF_DAY, hourOfDay);
+            calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
             alarm.setTime(calendar.getTime());
             return this;
         }
 
         public Builder setMinute(int minute) {
             Calendar calendar = getCalendar();
-            getCalendar().set(Calendar.MINUTE, minute);
+            calendar.set(Calendar.MINUTE, minute);
             alarm.setTime(calendar.getTime());
             return this;
         }
 
         public Builder setSecond(int second) {
             Calendar calendar = getCalendar();
-            getCalendar().set(Calendar.SECOND, second);
+            calendar.set(Calendar.SECOND, second);
             alarm.setTime(calendar.getTime());
             return this;
         }
