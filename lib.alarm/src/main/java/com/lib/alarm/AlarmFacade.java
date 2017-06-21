@@ -201,7 +201,7 @@ public class AlarmFacade {
         }
 
         public Builder setBell(IBell bell, String BellName) {
-            alarm.setBell(bell.getClass().toString(), BellName);
+            alarm.setBell(bell.getClass().getName().toString(), BellName);
             return this;
         }
 
