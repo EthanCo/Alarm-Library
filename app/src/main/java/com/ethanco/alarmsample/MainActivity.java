@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                             Date time = calendar.getTime();
 
                             Alarm alarm = new AlarmFacade.Builder()
+                                    //.setHourOfDay(hourOfDay)
+                                    //.setMinute(minute)
                                     .setTime(time)
                                     .setMode(AlarmMode.AROUSE)
                                     .setRule(createRule())
