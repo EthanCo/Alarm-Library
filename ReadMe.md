@@ -9,25 +9,23 @@
 	AlarmFacade.init(context,IEntireLog);  
 
 ### 创建闹铃  
-		Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
-        calendar.set(Calendar.MINUTE, minute);
-        Date time = calendar.getTime();
 
-        Alarm alarm = new AlarmFacade.Builder()
-                .setTime(time)
-                .setMode(AlarmMode.AROUSE)
-                .setRule(RuleFactory.create(AlarmRepeat.ONCE, null))
-                .setTargetIntentAction("action.ethanco.AlarmActivity")
-                .setBell(new PlayListBell(), "Boy.pm3")
-                .build();
+    Alarm alarm = new AlarmFacade.Builder()
+            .setHourOfDay(hourOfDay)
+            .setMinute(minute)
+            .setMode(AlarmMode.AROUSE)
+            .setRule(RuleFactory.create(AlarmRepeat.ONCE, null))
+            .setTargetIntentAction("action.ethanco.AlarmActivity")
+            .setBell(new PlayListBell(), "Boy.pm3")
+            .build();
+
 ### 设置闹铃
 
-        alarm.setAlarmClock(MainActivity.this);
+	alarm.setAlarmClock(MainActivity.this);
 
 ### 取消闹铃
 
-		alarm.cancelAlarmClock(MainActivity.this);
+	alarm.cancelAlarmClock(MainActivity.this);
 
 ### AlarmFacade#Builder类参数说明  
 
